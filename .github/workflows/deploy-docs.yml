@@ -37,7 +37,8 @@ jobs:
       - name: Build VuePress site
         run: pnpm docs:build
         env:
-          SITE_URL: "https://vordimous.gitub.io/sample-docs"
+          SITE_URL: "https://vordimous.gitub.io"
+          SITE_BASE: "/sample-docs/"
 
       # please check out the docs of the workflow for more details
       # @see https://github.com/crazy-max/ghaction-github-pages
