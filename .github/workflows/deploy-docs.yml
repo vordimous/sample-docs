@@ -36,6 +36,8 @@ jobs:
       # run build script
       - name: Build VuePress site
         run: pnpm docs:build
+        env:
+          SITE_URL: "https://vordimous.gitub.io/sample-docs"
 
       # please check out the docs of the workflow for more details
       # @see https://github.com/crazy-max/ghaction-github-pages
@@ -49,6 +51,13 @@ jobs:
         env:
           # @see https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      
+      # run build script
+      - name: Build VuePress site
+        run: pnpm docs:build
+        env:
+          SITE_URL: "https://timely-douhua-ef3a6d.netlify.app"
           
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
