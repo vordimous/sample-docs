@@ -4,7 +4,7 @@ icon: home
 title: Home
 heroImage: /logo-dark.png
 heroImageDark: /logo.png
-heroText: APIs for Data-in-Motion
+heroText: APIs for Data-in-Motion again
 tagline: Open source software connecting web and mobile applications to event-driven microservices using standard protocols, such as HTTP, Server-Sent Events and Kafka.
 actions:
   - text: " Quick Start"
