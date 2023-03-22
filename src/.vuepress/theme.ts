@@ -15,8 +15,7 @@ export default hopeTheme({
   logo: "/logo-dark.png",
   logoDark: "/logo.png",
   repo: "vuepress-theme-hope/vuepress-theme-hope",
-
-  docsDir: "demo/theme-docs/src",
+  home: false,
 
   locales: {
     "/": {
