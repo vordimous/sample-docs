@@ -1,22 +1,18 @@
 <template>
-    <div class="article-wrapper">
+    <div class="article-wrapper test">
       <div v-if="!items.length">Nothing in here.</div>
       <article
         v-for="{ info, path } in items"
         class="article"
         @click="$router.push(path)"
       >
-        <header class="title">
-          {{
-            (isTimeline ? `${new Date(info.date).toLocaleDateString()}: ` : "") +
-            info.title
-          }}
-        </header>
+      <pre>{{ JSON.stringify(info, null, 2) }}</pre>
+       
         <hr />
         <div class="article-info">
           <span v-if="info.author" class="author">Author: {{ info.author }}</span>
-          <span v-if="info.date && !isTimeline" class="date"
-            >Date: {{ new Date(info.date).toLocaleDateString() }}</span
+          <span v-if="info.date" class="date"
+            >Date: {{ new Date(info.d).toLocaleDateString() }}</span
           >
           <span v-if="info.category" class="category"
             >Category: {{ info.category.join(", ") }}</span
@@ -29,19 +25,22 @@
   </template>
   
   <script lang="ts" setup>
-  defineProps({
+  import { type PropType, onMounted } from "vue";
+  import { type ArticleInfo, ArticleInfoType } from "vuepress-theme-hope"
+
+  const props = defineProps({
     items: {
-      type: Array,
+      type: Array as PropType<{ path: string; info: ArticleInfo }[]>,
       default: () => [],
-    },
-    isTimeline: Boolean,
+    }
   });
+  onMounted(() => {
+    console.log(props.items);
+  })
   </script>
   <style lang="scss">
-  @use "@vuepress/theme-default/styles/mixins";
   
   .article-wrapper {
-    @include mixins.content_wrapper;
     text-align: center;
   }
   
