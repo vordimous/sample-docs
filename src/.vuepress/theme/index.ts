@@ -11,7 +11,7 @@ export default (options: ThemeOptions) => ({
 
   alias: {
     // set alias for replaceable components
-    // '@theme-hope/modules/blog/components/ArticleList': path.resolve(__dirname, './components/ArticleList.vue'),
+    '@theme-hope/modules/blog/components/ArticleList': path.resolve(__dirname, './components/ArticleList.vue'),
     '@theme-hope/modules/blog/components/ArticleItem': path.resolve(__dirname, './components/ArticleItem.vue'),
   },
 
