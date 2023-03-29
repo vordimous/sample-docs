@@ -10,6 +10,7 @@ export default hopeTheme({
     url: "https://www.aklivity.io/",
   },
   
+  pure: true,
   blog: {
     name: "blog name",
   },

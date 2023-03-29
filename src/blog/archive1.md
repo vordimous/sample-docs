@@ -1,6 +1,6 @@
 ---
 date: 1998-01-01
-cover: blog-6-cover@2x.png
+cover: /blog-6-cover@2x.png
 category:
   - History
 tag:

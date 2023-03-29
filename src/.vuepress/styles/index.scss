@@ -1,25 +1,3 @@
-// place your custom styles here
-.hero-info-wrapper img {
-  max-height: 13rem;
-}
-.hero-info-wrapper h1 {
-  font-size: 2.6rem;
-}
-
-html[data-theme=dark] #app {
-  --code-highlight-line-color: #0e5c49;
-}
-
-html[data-theme=light] #app {
-  --code-highlight-line-color: #78d0ba;
-}
-
-.catalog-display-container {
-  overflow-y: auto;
-
-  max-height: 75vh;
-  margin: 0.5rem;
-  border-radius: 0.5rem;
-
-  overflow-wrap: break-word;
+.blog-hero.no-bg {
+    height: 0px;
 }
